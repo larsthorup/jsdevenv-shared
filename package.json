@@ -10,7 +10,6 @@
     "engine": "node 1.1.x",
     "private": true,
     "dependencies": {
-        "grunt": "~0.4.5",
         "grunt-contrib-jshint": "~0.10.0"
     }
 }
