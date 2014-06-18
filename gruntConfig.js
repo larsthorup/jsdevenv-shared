@@ -2,6 +2,8 @@
 module.exports = function (grunt) {
     'use strict';
 
+    var sharedPath = './node_modules/jsdevenv-shared/node_modules/';
+
     var gruntConfig = {
         pkg: grunt.file.readJSON('package.json')
     };
@@ -11,7 +13,7 @@ module.exports = function (grunt) {
     grunt.registerTask('all', ['lint']);
 
     // lint
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadTasks(sharedPath + 'grunt-contrib-jshint/tasks');
     gruntConfig.jshint = {
         options: { bitwise: true, camelcase: true, curly: true, eqeqeq: true, forin: true, immed: true,
             indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, plusplus: true,
